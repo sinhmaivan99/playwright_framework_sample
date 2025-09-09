@@ -1,15 +1,13 @@
 {
-  "name": "playwright-framework-sample",
+  "name": "playwright-saucedemo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:login": "npx playwright test tests/login.spec.js",
+    "report": "npx playwright show-report",
+    "ui--": "npx playwright test --ui"
+  },
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
-    "@types/node": "^24.3.1"
+    "@playwright/test": "^1.48.0"
   }
 }
