@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "npx playwright test",
-    "test:login": "npx playwright test tests/login.spec.ts",
+    "test:login": "npx playwright test tests/login.spec.js",
     "test:smoke": "npx playwright test --grep @smoke",
     "test:headed": "npx playwright test --headed",
     "test:ui": "npx playwright test --ui",
@@ -11,19 +11,15 @@
     "lint:fix": "npx eslint . --fix",
     "format": "npx prettier . --check",
     "format:write": "npx prettier . --write .",
-    "typecheck": "npx tsc --noEmit",
     "browsers:install": "npx playwright install",
     "report": "npx playwright show-report reports/html"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.1",
-    "@types/node": "^24.3.1",
     "@playwright/test": "^1.55.0",
     "eslint": "^9.25.1",
     "globals": "^16.0.0",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.30.1"
+    "prettier": "^3.5.3"
   },
   "dependencies": {
     "dotenv": "^16.4.7"

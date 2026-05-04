@@ -1,11 +1,11 @@
-import { defineConfig, devices } from '@playwright/test';
-import dotenv from 'dotenv';
+const { defineConfig, devices } = require('@playwright/test');
+const dotenv = require('dotenv');
 
 const testEnv = process.env.TEST_ENV || 'dev';
 
 dotenv.config({ path: `.env.${testEnv}`, override: true });
 
-const defaultBaseUrls: Record<string, string> = {
+const defaultBaseUrls = {
   dev: 'https://www.saucedemo.com',
   staging: 'https://www.saucedemo.com',
   prod: 'https://www.saucedemo.com',
@@ -15,11 +15,11 @@ const baseURL = process.env.BASE_URL || defaultBaseUrls[testEnv];
 
 if (!baseURL) {
   throw new Error(
-    `Unsupported TEST_ENV "${testEnv}". Set BASE_URL or add the environment to playwright.config.ts.`,
+    `Unsupported TEST_ENV "${testEnv}". Set BASE_URL or add the environment to playwright.config.js.`,
   );
 }
 
-export default defineConfig({
+module.exports = defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
