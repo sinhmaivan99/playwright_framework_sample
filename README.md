@@ -261,10 +261,3 @@ module.exports = CartPage;
 - Assertion methods dùng prefix `expect*` nhất quán (`expectVisible`, `expectURL`, `expectText`, ...).
 
 ---
-
-## Hạn chế hiện tại
-
-- Mới có 1 luồng nghiệp vụ (login).
-- Chỉ chạy trên Chromium, chưa cấu hình đa trình duyệt.
-- Dữ liệu test tĩnh, chưa tích hợp API hoặc data factory.
-- Chưa có helper cho API setup/cleanup.
